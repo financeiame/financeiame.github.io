@@ -33,7 +33,7 @@
             <li>Você pode antecipar até <b>10 anos</b> do seu saldo FGTS!</li>
             <li>Pagamento <b>via PIX</b> em minutos!</li>
           </ul>
-          <a class="btn" href="https://api.whatsapp.com/send/?phone=5511912080991&text=Quero+fazer+uma+simula%C3%A7%C3%A3o%21&type=phone_number&app_absent=0">Simulação Grátis</a>
+          <a class="btn track-link" href="https://api.whatsapp.com/send/?phone=5511912080991&text=Quero+fazer+uma+simula%C3%A7%C3%A3o%21&type=phone_number&app_absent=0">Simulação Grátis</a>
         </section>
         <section class="product-highlight light">
           <h3>Empréstimo na Conta de Luz</h3>
@@ -42,14 +42,14 @@
             <li>Até <b>R$ 3.000,00</b> com desconto na conta de luz.</li>
             <li>Pagamento em até <b>24 horas</b>!</li>
           </ul>
-          <a class="btn" href="https://api.whatsapp.com/send/?phone=5511912080991&text=Simula%C3%A7%C3%A3o+Empr%C3%A9stimo+Conta+de+Luz&type=phone_number&app_absent=0">Simulação Grátis</a>
+          <a class="btn track-link" href="https://api.whatsapp.com/send/?phone=5511912080991&text=Simula%C3%A7%C3%A3o+Empr%C3%A9stimo+Conta+de+Luz&type=phone_number&app_absent=0">Simulação Grátis</a>
         </section>
       </div>
       <div class="call-to-action">
         <section class="content">
           <h4>Fale com nossos especialistas</h4>
           <p>Simulação gratuita!<br />Atendimento via WhatsApp</p>
-          <a class="btn icon-whatsapp" href="https://api.whatsapp.com/send/?phone=5511912080991&text=Quero+falar+com+um+especialista&type=phone_number&app_absent=0">Fale Conosco</a>
+          <a class="btn icon-whatsapp track-link" href="https://api.whatsapp.com/send/?phone=5511912080991&text=Quero+falar+com+um+especialista&type=phone_number&app_absent=0">Fale Conosco</a>
         </section>
       </div>
     </main>
@@ -72,5 +72,26 @@
       </div>
     </footer>
   </div>
+  <script>
+    const links = document.querySelectorAll('a.track-click');
+
+    links.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); // Stops the navigation briefly
+
+        // Send event to Google Analytics
+        gtag('event', 'click', {
+          event_category: 'outbound',
+          event_label: link.href,
+          value: 1
+        });
+
+        // After tracking, proceed with navigation
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, 200); // Delay to allow the tracking to complete
+      });
+    });
+  </script>
 </body>
 </html>

@@ -120,8 +120,6 @@ body {
   height: 48px;
   line-height: 48px;
   color: #ae5239;
-  opacity: 0.5;
-  animation: fadeAnimation 5s infinite ease-in-out;
 }
 
 a.btn,

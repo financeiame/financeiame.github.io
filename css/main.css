@@ -39,14 +39,12 @@ body {
   font-weight: 300;
   font-style: normal;
 
-  /* background: ; */
-  background: url('../images/background.jpg') center top #E9E1D3 no-repeat;
+  background-color: #E9E1D3;
+  background-image: url('../images/background.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
   background-size: cover;
   color: #444E47;
-}
-
-.main {
-
 }
 
 .main header {
@@ -59,11 +57,11 @@ body {
 
 .main header h1 {
   margin: 0 auto;
-  width: 300px;
-  height: 237px;
+  width: 280px;
+  height: 265px;
   background: url('../images/logo.png') no-repeat center center;
+  background-size: 240px;
   text-indent: -9999px;
-  background-size: 120%;
 }
 
 .main header h2 {
@@ -86,13 +84,13 @@ body {
   flex-direction: column;
 }
 
-.main-products section {
+.main-products .product-highlight {
   width: 100%;
   text-align: center;
   padding-bottom: 40px;
 }
 
-.main-products section h3 {
+.main-products .product-highlight h3 {
   color: #101812;
   font-size: 22px;
   font-weight: 400;
@@ -104,22 +102,21 @@ body {
   list-style: none;
   font-size: 16px;
   line-height: 1.5rem;
-  padding-bottom: 100px;
-  margin-bottom: 30px;
+  /* padding-bottom: 100px; */
+  margin-bottom: 20px;
 }
 
-.product-highlight.fgts ul {
-  background: url('../images/icon-fgts.png') center bottom no-repeat;
-}
 .product-highlight.fgts {
-  border-top: 1px solid #b4ac9e;
   padding-top: 40px;
-  border-bottom: 1px solid #b4ac9e;
+  /* border-bottom: 1px solid #b4ac9e; */
   margin-bottom: 40px;
 }
 
-.product-highlight.light ul {
-  background: url('../images/icon-light.png') center bottom no-repeat;
+.product-highlight i.fi {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 48px;
+  color: #BD5D43;
 }
 
 a.btn {
@@ -198,8 +195,12 @@ footer h5 {
     padding: 20px 0 30px;
   }
   .main header h1 {
-    width: 270px;
-    height: 200px;
+    width: 280px;
+    height: 150px;
+    background-size: 50%;
+  }
+  .main header h2 {
+    font-size: 14px;
   }
 
   .main-products.content {
@@ -211,7 +212,7 @@ footer h5 {
   .main-products {
     flex-direction: row;
   }
-  .main-products section {
+  .main-products product-highlight {
     width: 49%;
   }
 
@@ -221,4 +222,18 @@ footer h5 {
     padding-top: 0;
     border-right: 1px solid #b4ac9e;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  body, html {
+      background-color: #E9E1D3 !important;
+      color: #444E47 !important;
+  }
+  a {
+      color: #0000EE !important;
+  }
+  footer {
+    background: #EEE8DF !important;
+  }
+  /* Aplique !important para outros elementos conforme necessário */
 }

@@ -184,13 +184,19 @@ footer {
 }
 footer h5,
 footer p {
-  color: #A39D9A;
+  color: #756f6c;
   margin-bottom: 20px;
   font-size: 0.95rem;
   line-height: 1.4rem;
+  text-align:justify;
 }
 footer h5 {
-  margin-bottom: 5px;
+  color: #7f7a78;
+  margin-bottom: 8px;
+  font-weight: normal;
+
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 @media (max-width: 780px) {
@@ -208,6 +214,10 @@ footer h5 {
 
   .main-products.content {
     padding-top: 0;
+  }
+
+  footer .content {
+    padding: 20px;
   }
 }
 

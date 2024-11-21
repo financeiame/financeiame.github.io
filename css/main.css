@@ -220,15 +220,15 @@ a.btn:hover {
   background: #53D1FF;
   border-bottom: 4px solid #3faed6;
   color: #1b283e;;
-  font-size: 24px;
+  font-size: 1.2rem;
   font-weight: normal;
   letter-spacing: -0.5px;
 }
 
 .call-to-action a.btn.icon-whatsapp {
-  padding-left: 70px;
+  padding-left: 60px;
   background: url('../images/icon-whatsapp-btn.png') 25px center no-repeat #53D1FF;
-  background-size: 32px;
+  background-size: 26px;
 }
 
 .call-to-action a.btn.icon-whatsapp:hover,
@@ -244,7 +244,7 @@ footer p {
   color: #2f3541;
   margin-bottom: 30px;
   line-height: 1.5rem;
-  text-align:justify;
+  /* text-align:justify; */
   opacity: 0.7;
 }
 footer h5 {
@@ -285,7 +285,14 @@ footer p {
   }
 
   .content {
-    padding: 50px 30px;
+    padding: 40px 25px;
+  }
+
+  a.btn,
+  a.btn:hover,
+  a.btn:active,
+  a.btn:visited {
+    padding: 15px 18px;
   }
 
   .main-products.content {

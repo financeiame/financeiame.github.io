@@ -245,6 +245,7 @@ footer p {
   margin-bottom: 30px;
   line-height: 1.5rem;
   text-align:justify;
+  opacity: 0.7;
 }
 footer h5 {
   color: #333;
@@ -276,6 +277,13 @@ footer p {
     display: none;
   }
 
+  .main-products .product-highlight h3 {
+    font-size: 1.4rem;
+  }
+  .main-products .product-highlight ul {
+    font-size: 0.95rem;
+  }
+
   .content {
     padding: 50px 30px;
   }
@@ -286,10 +294,6 @@ footer p {
 
   .advantages ul {
     flex-direction: column;
-  }
-
-  footer .content {
-    padding: 20px;
   }
 }
 
@@ -308,17 +312,6 @@ footer p {
   }
 }
 
-/*
-@media (prefers-color-scheme: dark) {
-  body, html {
-      background-color: #ffffff !important;
-      color: #444E47 !important;
-  }
-  footer {
-    background: #EEE8DF !important;
-  }
-}
-*/
 
 
 @keyframes bounceAnimation {

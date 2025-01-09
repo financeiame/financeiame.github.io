@@ -266,6 +266,17 @@ footer p {
 }
 
 @media (max-width: 780px) {
+  main {
+    margin-top: 30px;
+  }
+
+  .banner-wide {
+    display: none;
+  }
+  .banner-portrait {
+    display: block;
+  }
+
   .main header {
     padding: 10px 0;
   }
@@ -311,6 +322,13 @@ footer p {
 }
 
 @media (min-width: 780px) {
+  .banner-wide {
+    display: block;
+  }
+  .banner-portrait {
+    display: none;
+  }
+
   .main-products {
     flex-direction: row;
   }
